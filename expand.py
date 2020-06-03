@@ -15,4 +15,4 @@ if __name__ == '__main__':
            pattern=r'{}',
            replacement=r'[^\N]',
            min_count=0,
-           max_count=15)
+           max_count=8)
