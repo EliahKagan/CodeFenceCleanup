@@ -11,7 +11,7 @@ def expand(text, pattern, replacement, min_count, max_count):
 
 
 if __name__ == '__main__':
-    expand(text=r"OR ph.Text LIKE '%\n[`~][`~][`~]{}[^a-z\N]%'",
+    expand(text=r"OR ph.Text LIKE '%\n```{}[^a-z\N]%'",
            pattern=r'{}',
            replacement=r'[^\n]',
            min_count=0,
