@@ -6,7 +6,7 @@ def expand(text, pattern, replacement, min_count, max_count):
     """Expands \n and a single replacement with repetitions."""
     for count in range(min_count, max_count + 1):
         print(text.replace(pattern, replacement * count)
-                  .replace(r'\n', "' + CHAR(10) + '"))
+                  .replace(r'\n', "' + CHAR(13) + CHAR(10) + '"))
 
 
 if __name__ == '__main__':
