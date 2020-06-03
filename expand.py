@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expand (what's intended to be a) a T-SQL expression for searching."""
+"""Expand (what's intended to be) a T-SQL expression for searching."""
 
 
 def expand(text, pattern, replacement, min_count, max_count):
@@ -15,4 +15,4 @@ if __name__ == '__main__':
            pattern=r'{}',
            replacement=r'[^\N]',
            min_count=0,
-           max_count=5)  # 5 is not high enough. This is just for testing.
+           max_count=15)
