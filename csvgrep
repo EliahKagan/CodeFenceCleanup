@@ -1,0 +1,6 @@
+#!/bin/sh
+
+csvgrep -c Text -r '(?:^|\n)(`{3,})(?!`|[^\r\n]*\1)[a-z]*(?:[^a-z\s]|[ \t]+\S)' fences.csv |
+    csvcut -c 'Post Link' |
+    grep -oP '""id"": \K\d+' |
+    xargs printf 'https://askubuntu.com/posts/%s/revisions\n'
