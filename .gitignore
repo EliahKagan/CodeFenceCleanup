@@ -1,2 +1,8 @@
+# Cached Python modules
+__pycache__/
+
+# Output files
+out[0-9]
+
 # This branch has been rebased to not track .csv files. To keep it that way...
 *.csv
