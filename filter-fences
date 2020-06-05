@@ -1,6 +1,8 @@
 #!/bin/sh
 # filter-fences - Uses csvgrep to find posts that may have broken code fences.
 
+# shellcheck disable=SC2016  # The operand to csvgrep -r is meant literally.
+
 csvgrep -c Text -r '(?mx)  # Match ^ on each line. ("." does not match "\n".)
             ^(`{3,})(?!`)(?!.*\1)  # A code fence, not all one one line.
             [a-z]*                 # Optional lowercase.
