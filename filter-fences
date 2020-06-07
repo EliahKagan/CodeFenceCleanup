@@ -4,7 +4,7 @@
 # shellcheck disable=SC2016  # The operand to csvgrep -r is meant literally.
 
 csvgrep -c Text -r '(?mx)  # Match ^ on each line. ("." does not match "\n".)
-            ^[ \t]*(`{3,})(?!`)(?!.*\1)  # A code fence, not all one one line.
+            ^[ \t]*(([`~])\2{2,})(?!`)(?!.*\1)  # A code fence, not all on one line.
             [a-z]*                       # Optional lowercase.
             (?:[^a-z\s]                  # Non-whitespace non-lowercase, OR
               |[ \t]+\S)                 #   blanks followed by non-whitespace.
