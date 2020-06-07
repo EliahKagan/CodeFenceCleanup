@@ -1,5 +1,5 @@
 #!/bin/sh
-# filter-fences - Uses csvgrep to find posts that may have broken code fences.
+# scratch - Investigating a change in how the Post Link column is presented.
 
 # shellcheck disable=SC2016  # The operand to csvgrep -r is meant literally.
 
@@ -9,6 +9,6 @@ csvgrep -c Text -r '(?mx)  # Match ^ on each line. ("." does not match "\n".)
             (?:[^a-z\s]                  # Non-whitespace non-lowercase, OR
               |[ \t]+\S)                 #   blanks followed by non-whitespace.
         ' fences.csv |
-    csvcut -c 'Post Link' |
-    #grep -oP '""id"": \K\d+' |
-    xargs printf 'https://askubuntu.com/posts/%s/revisions\n'
+    csvcut -c 'Post Link' #|
+#    grep -oP '""id"": \K\d+' |
+#    xargs printf 'https://askubuntu.com/posts/%s/revisions\n'
