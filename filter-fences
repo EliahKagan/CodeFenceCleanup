@@ -10,5 +10,5 @@ csvgrep -c Text -r '(?mx)  # Match ^ on each line. ("." does not match "\n".)
               |[ \t]+\S)                 #   blanks followed by non-whitespace.
         ' fences.csv |
     csvcut -c 'Post Link' |
-    #grep -oP '""id"": \K\d+' |
+    sed 1d |  # Remove header line (that says "Post Link").
     xargs printf 'https://askubuntu.com/posts/%s/revisions\n'
