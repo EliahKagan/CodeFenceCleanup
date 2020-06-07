@@ -6,9 +6,8 @@
 csvgrep -c Text -r '(?mx)  # Match ^ on each line. ("." does not match "\n".)
             ^[ \t]*(([`~])\2{2,})(?!`)(?!.*\1)  # Opening line of a code fence.
             [a-z]*                              # Lowercase letters, maybe.
-            (?:[^a-z\s]     # Either (a) non-whitespace non-lowercase, OR
-              |[ \t]+\S)    #        (b) blanks followed by non-whitespace.
+            (?:[^a-z\s]    # Either (a) non-whitespace non-lowercase, OR
+              |[ \t]+\S)   #        (b) blanks followed by non-whitespace.
         ' fences.csv |
     csvcut -c 'Post Link' |
-    sed 1d |  # Remove header line (that says "Post Link").
-    xargs printf 'https://askubuntu.com/posts/%s/revisions\n'
+    sed '1d; s@.*@https://askubuntu.com/posts/&/revisions@'
