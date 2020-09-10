@@ -30,6 +30,15 @@ under CC0.
 
 **The only script here that is currently being used is `filter-fences`.**
 
+To use it, give it CSV data on standard input. For example:
+
+```sh
+./filter-fences <QueryResults.csv >outfile
+```
+
+Previous versions of `filter-fences` hard-coded the input filename (and did not
+read from standard input), but the current version works this way instead.
+
 The other script that was once useful is `expand.py`, but that approach to
 generating T-SQL is no longer being used. Instead,
 [a more general (and much nicer) query](https://data.stackexchange.com/askubuntu/revision/1246925/1535442/seems-to-have-code-fences)
