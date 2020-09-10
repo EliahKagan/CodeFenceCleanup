@@ -25,3 +25,14 @@ Exchange, *not* under this public domain dedication.
 I believe I did the rebase correctly, but in case some commit has a .csv file,
 I am *not* claiming authorship of its contents, nor attempting to offer it
 under CC0.
+
+---
+
+**The only script here that is currently being used is `filter-fences`.**
+
+The other script that was once useful is `expand.py`, but that approach to
+generating T-SQL is no longer being used. Instead,
+[a more general (and much nicer) query](https://data.stackexchange.com/askubuntu/revision/1246925/1535442/seems-to-have-code-fences)
+is used and filtered (way!) down by `filter-fences`.
+
+The other script, `search.py`, is just a bit of scratchwork.
