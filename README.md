@@ -28,7 +28,8 @@ under CC0.
 
 ---
 
-**The only script here that is currently being used is `filter-fences`.**
+**The only script here that is currently being used is
+[`filter-fences`](https://gist.github.com/EliahKagan/16a6b13ee717149ab41f983b3635659c#file-filter-fences).**
 
 To use it, give it CSV data on standard input. For example:
 
