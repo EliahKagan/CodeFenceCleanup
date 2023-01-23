@@ -1,3 +1,10 @@
+This is a mirror of [the CodeFenceCleanup
+gist](https://gist.github.com/EliahKagan/16a6b13ee717149ab41f983b3635659c).
+This repository might be easier to read and work with, but their contents are
+the same except internal hyperlinks.
+
+---
+
 # CodeFenceCleanup - scripts for finding posts with broken code fences
 
 *Written in 2020 by Eliah Kagan \<degeneracypressure@gmail.com\>.*
@@ -30,7 +37,7 @@ under CC0.
 ---
 
 **The only script here that is currently being used is
-[`filter-fences`](https://gist.github.com/EliahKagan/16a6b13ee717149ab41f983b3635659c#file-filter-fences).**
+[`filter-fences`](filter-fences).**
 
 To use it, give it CSV data on standard input. For example:
 
